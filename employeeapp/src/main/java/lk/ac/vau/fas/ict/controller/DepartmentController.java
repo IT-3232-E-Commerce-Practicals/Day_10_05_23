@@ -37,6 +37,11 @@ public class DepartmentController {
 		
 	}
 	
+	@PostMapping
+	public ResponseEntity<String> addDept(@RequestBody Department department){
+		return new ResponseEntity<String>(service.addDept(department),HttpStatus.OK);
+		
+	}
 	
 	
 	
